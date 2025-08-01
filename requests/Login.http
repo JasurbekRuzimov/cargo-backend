@@ -1,0 +1,20 @@
+### Register request
+POST http://localhost:8080/api/v1/auth/register
+Content-Type:  application/json
+
+{
+  "firstName": "Jasurbek",
+  "lastName": "Ruzimov",
+  "middleName": "Oybek og'li",
+  "phoneNumber": "+998973432105",
+  "password": "Grechka4kg$"
+}
+
+### Login request
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "phoneNumber": "+998973432105",
+  "password": "Grechka4kg$"
+}

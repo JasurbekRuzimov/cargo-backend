@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active:
+      dev
+
+attach:
+  upload:
+    folder:
+      attaches/
+
+  download:
+    url:
+      ${app.url}/attach/public/open/

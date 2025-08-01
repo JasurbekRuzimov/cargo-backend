@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: Jasurbek_2105
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  servlet:
+    multipart:
+      max-file-size:
+        10MB
+      max-request-size:
+        10MB
+
+server:
+  port:
+    8080
+  address:
+    localhost
+app:
+  url:
+    http://${server.address}:${server.port}
+
+
+jwt:
+  secret: QmlyYmFsb2xhcmRh
+  expiration-ms: 604800000
