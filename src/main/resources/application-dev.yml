@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: false
     properties:
       hibernate:
@@ -31,5 +31,5 @@ app:
 
 
 jwt:
-  secret: QmlyYmFsb2xhcmRh
+  secret: Bto6p+zSi8W0H2xnsMsx1oZ6km8Q/uOxI1wndpbuebE=
   expiration-ms: 604800000

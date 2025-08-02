@@ -1,10 +1,10 @@
 ### Create Cargo
 POST http://localhost:8080/api/v1/cargo/create
-Authorization: Bearer jwt-token
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIrOTk4OTE3OTcyMzg1IiwiaWF0IjoxNzU0MTMwNTk1LCJleHAiOjE3NTQ3MzUzOTV9.x1tFNHVTG2mhh9wxkoeJxccVykyZiTyod5bXPmRSoSc
 Content-Type: application/json
 
 {
-  "fromARegion": "Tashkent",
+  "fromARegion": "Toshkent",
   "fromBDistrict": "Yunusabad",
   "toARegion": "Samarkand",
   "toBDistrict": "Registon",
@@ -12,5 +12,9 @@ Content-Type: application/json
 }
 
 ### Find all in cargo
-GET http://localhost:8080/api/v1/cargo/get/all
+GET http://localhost:8080/api/v1/cargo/get/all?page=0&size=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIrOTk4OTE3OTcyMzg1IiwiaWF0IjoxNzU0MTMwNTk1LCJleHAiOjE3NTQ3MzUzOTV9.x1tFNHVTG2mhh9wxkoeJxccVykyZiTyod5bXPmRSoSc
 
+### Delete request
+DELETE http://localhost:8080/api/v1/cargo/delete/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIrOTk4OTE3OTcyMzg1IiwiaWF0IjoxNzU0MTMwNTk1LCJleHAiOjE3NTQ3MzUzOTV9.x1tFNHVTG2mhh9wxkoeJxccVykyZiTyod5bXPmRSoSc

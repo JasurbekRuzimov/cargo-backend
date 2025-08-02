@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 public class CargoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String fromARegion;
     private String fromBDistrict;
@@ -32,5 +32,8 @@ public class CargoEntity {
 
     @Column(name = "user_id")
     private Long userId;
+
+    @Column(name = "active")
+    private Boolean active = true;
 
 }

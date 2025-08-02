@@ -7,18 +7,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "user_attach")
-public class UserAttachEntity {
+@Table(name = "cargo_attach")
+public class CargoAttachEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
-    private UserEntity user;
+    @JoinColumn(name = "cargo_id", insertable = false, updatable = false)
+    private CargoEntity cargo;
 
-    @Column(name = "user_id")
-    private Long userId;
+    @Column(name = "cargo_id")
+    private Long cargoId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "attach_id", insertable = false, updatable = false)
@@ -26,7 +26,4 @@ public class UserAttachEntity {
 
     @Column(name = "attach_id")
     private String attachId;
-
-
-
 }
